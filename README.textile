@@ -1,0 +1,8 @@
+h1. Data files for jQuery.autocomplete()
+
+Language, script and country lists for use with jQuery autocomplete. Current datasets are available:
+
+* iso-639-3 :- ISO 639-3 three letter language tags  from ISO 639-3 RA data
+* lsu-languages :- tags for languages from the IANA registry
+* lsu-regions :- tags for regions and countries from the IANA registry
+* iso15924 :- ISO 15924 script tags
