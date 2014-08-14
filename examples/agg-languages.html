@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>jQuery UI Autocomplete - Default functionality</title>
+<link rel="stylesheet" href="//code.jquery.com/ui/1.11.0/themes/smoothness/jquery-ui.css">
+<script src="//code.jquery.com/jquery-1.10.2.js"></script>
+<script src="//code.jquery.com/ui/1.11.0/jquery-ui.js"></script>
+<script src="../data/aggregatelang.min.js"></script> 
+<!-- <link rel="stylesheet" href="/resources/demos/style.css">  -->
+<script>
+
+$(function() {
+$( "#languages" ).autocomplete({
+source: aggregateLang,
+select: function(e, ui) {
+                  e.preventDefault();
+                  $("#languages").val(ui.item.label);
+                  alert("User selected: " + ui.item.value );
+                  window.location.href = 'http://www.ethnologue.com/language/' + ui.item.value;
+         },
+focus: function(e, ui) {
+                e.preventDefault();
+                $("#languages").val(ui.item.label);
+         }
+});
+});
+
+
+
+</script>
+</head>
+<body>
+<div class="ui-widget">
+<label for="languages">Language: </label>
+<input id="languages">
+</div>
+<div><iframe src="" frameborder="0" id="mainFrame" width="100%"></iframe></div>
+        </div>
+</body>
+</html>
